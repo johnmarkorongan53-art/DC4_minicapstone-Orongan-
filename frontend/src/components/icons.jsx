@@ -1,0 +1,5 @@
+import React from 'react';
+
+const glyphs = { Activity:'↗', ArrowDownRight:'↘', ArrowRight:'→', ArrowUpRight:'↗', Bell:'◌', CalendarDays:'▦', Check:'✓', ChevronDown:'⌄', ChevronLeft:'‹', ChevronRight:'›', CircleHelp:'?', ClipboardList:'▤', Dumbbell:'⌁', Home:'⌂', LogOut:'↪', Menu:'☰', Plus:'+', Search:'⌕', Settings:'⚙', ShieldCheck:'✓', Trophy:'♜', Users:'♧', X:'×' };
+function makeIcon(name) { return function Icon({ size = 18, strokeWidth = 2, className = '', ...props }) { return <svg className={`icon-glyph ${className}`} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" {...props}><text x="12" y="17" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="17" fontWeight={strokeWidth > 2 ? 700 : 500}>{glyphs[name]}</text></svg>; }; }
+export const { Activity, ArrowDownRight, ArrowRight, ArrowUpRight, Bell, CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Dumbbell, Home, LogOut, Menu, Plus, Search, Settings, ShieldCheck, Trophy, Users, X } = Object.fromEntries(Object.keys(glyphs).map(name => [name, makeIcon(name)]));
