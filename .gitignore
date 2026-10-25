@@ -1,8 +1,14 @@
 /backend/vendor/
+/backend/.phpunit.cache/
+/backend/.phpunit.result.cache
+/backend/bootstrap/cache/*.php
+/backend/storage/logs/*.log
+/backend/database/*.sqlite
 /frontend/node_modules/
 /backend/.env
 /frontend/.env
 /frontend/.npm-cache/
 /frontend/dist/
+/.tools/
 .DS_Store
 Thumbs.db

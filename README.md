@@ -28,6 +28,8 @@ Requirements: PHP 8.2+ with PDO MySQL, Composer, Node.js 20+, npm, and MySQL/Mar
 4. In another terminal, go to `frontend`, run `npm install`, copy `.env.example` to `.env`, and run `npm run dev`.
 5. Open the Vite URL (normally `http://localhost:5173`). The Laravel API runs at `http://localhost:8000/api`.
 
+On this prepared workspace, start the API with `powershell -ExecutionPolicy Bypass -File .\backend\dev.ps1`. It uses the workspace-local PHP runtime when present. The local `.env` uses SQLite because no MySQL server is installed in this environment; fresh installations should use the MySQL settings from `.env.example`.
+
 The configured database has the four requested domain tables. Sanctum also needs its `personal_access_tokens` infrastructure table to persist API tokens.
 
 ## Demo accounts
