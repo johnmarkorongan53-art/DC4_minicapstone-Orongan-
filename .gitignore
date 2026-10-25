@@ -1,0 +1,8 @@
+/backend/vendor/
+/frontend/node_modules/
+/backend/.env
+/frontend/.env
+/frontend/.npm-cache/
+/frontend/dist/
+.DS_Store
+Thumbs.db
