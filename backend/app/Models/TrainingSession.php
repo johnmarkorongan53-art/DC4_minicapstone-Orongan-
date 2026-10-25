@@ -1,0 +1,4 @@
+<?php
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+class TrainingSession extends Model { protected $fillable=['athlete_id','training_type_id','created_by','reviewed_by','title','description','session_date','start_time','end_time','location','intensity','status','duration_minutes','perceived_exertion','distance_km','athlete_notes','coach_feedback','reviewed_at']; protected function casts(): array { return ['session_date'=>'date','reviewed_at'=>'datetime','distance_km'=>'decimal:2']; } public function athlete(){return $this->belongsTo(Athlete::class);} public function trainingType(){return $this->belongsTo(TrainingType::class);} public function creator(){return $this->belongsTo(User::class,'created_by');} public function reviewer(){return $this->belongsTo(User::class,'reviewed_by');} }
